@@ -1,0 +1,151 @@
+ image: const AssetImage('images/leaves.jpg'),
+            alignment: Alignment.topRight,
+            height:400,)),
+                    ),
+ Row(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(10.0),
+                        margin: EdgeInsets.all(28.0),
+                        height: 75.0,
+                        width: 300.0,
+                        color: Color(0XFF005CA3),
+                        child: Text(
+                          'Click here for Resume',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontFamily: ('SourceSansPro'),
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(10.0),
+                        margin: EdgeInsets.all(25.0),
+                        height: 150.0,
+                        width: 150.0,
+                        color: Color(0xFF43AA8B),
+                        child: Text(
+                          'Click here for projects',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontFamily: ('SourceSansPro'),
+                            color: Colors.white,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                  Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        ElevatedButton(
+                          onPressed: () {
+                            
+                          },
+                          child: const Text(
+                            'PROGRESS',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                              primary: const Color(0XFF005CA3),
+                              fixedSize: const Size.square(135.0),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20))),
+                        ),
+                        ElevatedButton(
+                          onPressed: () {
+                           
+                          },
+                          child: const Text(
+                            'SKILLS',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                              primary: const Color(0XFF005CA3),
+                              fixedSize: const Size.square(135.0),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20))),
+                        ),
+                       
+                       Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      ElevatedButton(
+                        onPressed: () {
+                          
+                        },
+                        child: Image.asset("assets/fb.png"),
+                        style: ElevatedButton.styleFrom(
+                            primary: const Color(0XFEDDE3DC),
+                            fixedSize: const Size.square(80.0),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20))),
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          
+                        },
+                        child: Image.asset("assets/linkedin.png"),
+                        style: ElevatedButton.styleFrom(
+                            primary: const Color(0XFEDDE3DC),
+                            fixedSize: const Size.square(80.0),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20))),
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          
+                        },
+                        child: Image.asset("assets/gh.png"),
+                        style: ElevatedButton.styleFrom(
+                            primary: const Color(0XFEDDE3DC),
+                            fixedSize: const Size.square(80.0),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20))),
+                      )
+                    ],
+                  ),
+                      ]),
+             
+        
+         
+            
+          
+            
+          ])
+
+        
+          )
+   
+    );
+  }}
+
+   Row(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(0.2),
+                        margin: EdgeInsets.all(8.0),
+                        height: 47.0,
+                        width: 350.0,
+                        color: Color(0XFF005CA3),
+                        child: Text(
+                          '           Certified by Think Digital',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontFamily: ('SourceSansPro'),
+                            color: Colors.white,
+                            
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
