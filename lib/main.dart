@@ -1,10 +1,15 @@
-// ignore_for_file: prefer_const_constructors, duplicate_ignore
+// ignore_for_file: prefer_const_constructors, duplicate_ignore, unnecessary_new
 
 import 'package:demo_1/next.dart';
 import 'package:flutter/material.dart';
+//import 'package:url_launcher/url_launcher.dart';
+//import 'package:url_launcher/url_launcher_string.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MaterialApp(
+    home: MyApp() ,
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -12,9 +17,25 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        // ignore: duplicate_ignore
-        home: Scaffold(
+    return new MaterialApp(
+        home: new HomeScreen());
+  }
+}
+
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({Key? key}) : super(key: key);
+ // _launchurl()async{
+ //   const url="https://github.com/";
+ //   if (await canLaunchUrl(_launchurl()))
+ //     {    await launchUrlString(_launchurl());
+ //     } 
+ //   else {
+ //                         throw 'Could not launch $url';
+ //                       }
+ // }
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
             appBar: AppBar(
               title: const Center(child: Text('All About Me')),
               backgroundColor: Colors.teal[500],
@@ -40,19 +61,20 @@ class MyApp extends StatelessWidget {
                       fontWeight: FontWeight.bold),
                 ),
               ]),
+
               Container(
-                padding: EdgeInsets.all(10.0),
+                padding: const EdgeInsets.all(10.0),
                 margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 20.0),
                 color: Colors.white,
                 child: Row(
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.contact_mail,
                       color: Colors.teal,
                       size: 25.0,
                     ),
                     Text(
-                      '\t\t\tSenior Software Developer',
+                      '\t\t\t\t\t\t\tSoftware Developer',
                       style: TextStyle(
                         fontFamily: 'SourceSansPro',
                         fontSize: 20.0,
@@ -109,14 +131,14 @@ class MyApp extends StatelessWidget {
                     ),
 
                   ],
-                ),
-              ),
+                ),),
+             
               Card(
                   color: Color(0XFF005CA3),
                   margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25),
                   child: ListTile(
                       title: Text(
-                    '           Certified',
+                    '                         Certified',
                     style: TextStyle(
                       fontSize: 20.0,
                       fontFamily: ('SourceSansPro'),
@@ -133,7 +155,8 @@ class MyApp extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   ElevatedButton(
-                    onPressed: () {
+                    onPressed: () {Navigator.push(
+        context, MaterialPageRoute(builder: (context)=>Next()));
                     },
                     child: const Text(
                       'RESUME',
@@ -196,16 +219,19 @@ class MyApp extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   ElevatedButton(
-                    onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context)=>Next()));},
+                    onPressed: () {
+                  },
                     child: Image.asset('images/lin.png'),
-                    style: ElevatedButton.styleFrom(
+                   style: ElevatedButton.styleFrom(
                         primary: const Color(0XFEDDE3DC),
                         fixedSize: const Size.square(80.0),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(70))),
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed:() {
+                      //_launchurl();
+                      },
                     child: Image.asset('images/git.png'),
                     style: ElevatedButton.styleFrom(
                         primary: const Color(0XFEDDE3DC),
@@ -234,6 +260,6 @@ class MyApp extends StatelessWidget {
             
             
             
-              )])));
+              )]));
   }
 }
